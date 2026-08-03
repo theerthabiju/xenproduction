@@ -1,0 +1,168 @@
+.offcanvas-area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    z-index: 99999;
+    padding: 50px 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    background: var(--zo-common-white);
+    overscroll-behavior-y: contain;
+    -webkit-transform: translateX(calc(100% + 80px));
+    -moz-transform: translateX(calc(100% + 80px));
+    -ms-transform: translateX(calc(100% + 80px));
+    -o-transform: translateX(calc(100% + 80px));
+    transform: translateX(calc(100% + 80px));
+    transition: all 0.5s ease-in-out;
+}
+
+.offcanvas-area.opened {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 400px) {
+    .offcanvas-area {
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .offcanvas-area {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .offcanvas-area {
+        width: 450px;
+    }
+}
+
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.45s ease-in-out;
+    background: rgba(248, 73, 73, 0.4);
+}
+
+.body-overlay.opened {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(min-width:1201px) {
+    .header-button-area {
+        display: none;
+    }
+}
+.offcanvas-top {
+    border-bottom: 1px solid var(--zo-common-black);
+    padding-bottom: 30px;
+}
+.offcanvas-close-btn {
+    background: none;
+    border: none;
+}
+.offcanvas-close-btn svg {
+    width: 34px;
+    height: 34px;
+    fill: var(--zo-common-black);
+    transition: all 0.3s;
+}
+.offcanvas-title {
+    margin-bottom: 18px;
+    color: var(--zo-common-black);
+    margin-top: 24px;
+}
+.offcanvas-content p {
+    color: var(--zo-common-black);
+    padding-bottom: 18px;
+}
+.offcanvas-contact .contact-info-list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+.offcanvas-social ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.header-button-area .header-right-area{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+.header-button-area .offcanvas-open-btn {
+    display: none;
+}
+.offcanvas-main .contact-btn-wrapper  .orrange-btn {
+    padding: 12px 25px;
+}
+/* Off Canvas Overlay */
+.offcanvas-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 9998;
+}
+.offcanvas-overlay.opened {
+    opacity: 1;
+    visibility: visible;
+}
+/*----------------------------------------*/
+/* 6.2 Mobile css
+  /*----------------------------------------*/
+.offcanvas-menu li.active .menu-close {
+    transform: rotate(90deg);
+}
+.offcanvas-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.offcanvas-social ul li i{
+    font-size: 20px;
+    color: var(--zo-common-black);
+    transition: all 0.3s ease-in-out;
+}
+.offcanvas-social ul li:hover i {
+    color: var(--zo-theme-primary);
+}
+.menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 34px;
+    width: 34px;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    border: 1px solid rgba(1, 15, 28, 0.12);
+}
+
+.menu-close i {
+    transition: all 0.3s;
+}
