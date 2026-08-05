@@ -116,20 +116,20 @@
 
     //////////////////////////////////////////////////////
     // 06. Custom Cursor Js
-    document.onmousemove = function (e) {
-        document.body.style.setProperty("--x", e.clientX + "px");
-        document.body.style.setProperty("--y", e.clientY + "px");
-    };
+    // document.onmousemove = function (e) {
+    //     document.body.style.setProperty("--x", e.clientX + "px");
+    //     document.body.style.setProperty("--y", e.clientY + "px");
+    // };
 
-    const generateElements = document.querySelectorAll(".hero-banner");
-    generateElements.forEach(elm => {
-        elm.addEventListener("mouseover", function () {
-            document.body.classList.add("button-hovered");
-        });
-        elm.addEventListener("mouseleave", function () {
-            document.body.classList.remove("button-hovered");
-        });
-    });
+    // const generateElements = document.querySelectorAll(".hero-banner");
+    // generateElements.forEach(elm => {
+    //     elm.addEventListener("mouseover", function () {
+    //         document.body.classList.add("button-hovered");
+    //     });
+    //     elm.addEventListener("mouseleave", function () {
+    //         document.body.classList.remove("button-hovered");
+    //     });
+    // });
 
     //////////////////////////////////////////////////////
     // 07. Service Card Carrousel Js

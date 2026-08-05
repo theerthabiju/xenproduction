@@ -1,11 +1,7 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Vimato – HTML5 Template
-    Author: Zodevs
-    Support: support@zodevs.com
-    Description: Vimato is a futuristic AI agent template designed for generating images, videos, and animations—ideal for creative platforms, SaaS tools, and tech startups.
-    Version: 1.0
+  
 
 -----------------------------------------------------------------------------------
 
@@ -2810,7 +2806,7 @@ body.button-hovered::after {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: url('data:image/svg+xml;utf8,<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_82_567)"><path d="M0 2.22995C0.0746475 0.622806 1.59248 -0.411247 3.14764 0.149384C4.9765 0.809683 6.80536 1.50736 8.63423 2.19257C20.0926 6.45337 31.551 10.7142 42.997 14.975C43.196 15.0497 43.4075 15.1245 43.6066 15.2117C44.5148 15.6103 45.0249 16.3952 45 17.3794C44.9751 18.3014 44.4028 19.0987 43.4822 19.4102C42.3998 19.7715 41.2925 20.1079 40.1977 20.4442C35.4078 21.9393 30.6179 23.4343 25.828 24.9293C25.3553 25.0788 25.094 25.3778 24.9447 25.8512C23.1532 31.6319 21.3492 37.4002 19.5452 43.1809C19.1346 44.514 18.1269 45.1992 16.8952 44.9625C16.0119 44.7881 15.4645 44.2275 15.1534 43.3803C14.0462 40.3778 12.9265 37.3878 11.8192 34.3977C7.98728 24.0572 4.14294 13.7291 0.323472 3.38859C0.186619 3.01483 0.111971 2.61616 0 2.22995Z" fill="%23FEE551"/></g><defs><clipPath id="clip0_82_567"><rect width="45" height="45" fill="white"/></clipPath></defs></svg>') 22 22, pointer;
+  /* cursor: url('data:image/svg+xml;utf8,<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_82_567)"><path d="M0 2.22995C0.0746475 0.622806 1.59248 -0.411247 3.14764 0.149384C4.9765 0.809683 6.80536 1.50736 8.63423 2.19257C20.0926 6.45337 31.551 10.7142 42.997 14.975C43.196 15.0497 43.4075 15.1245 43.6066 15.2117C44.5148 15.6103 45.0249 16.3952 45 17.3794C44.9751 18.3014 44.4028 19.0987 43.4822 19.4102C42.3998 19.7715 41.2925 20.1079 40.1977 20.4442C35.4078 21.9393 30.6179 23.4343 25.828 24.9293C25.3553 25.0788 25.094 25.3778 24.9447 25.8512C23.1532 31.6319 21.3492 37.4002 19.5452 43.1809C19.1346 44.514 18.1269 45.1992 16.8952 44.9625C16.0119 44.7881 15.4645 44.2275 15.1534 43.3803C14.0462 40.3778 12.9265 37.3878 11.8192 34.3977C7.98728 24.0572 4.14294 13.7291 0.323472 3.38859C0.186619 3.01483 0.111971 2.61616 0 2.22995Z" fill="%23FEE551"/></g><defs><clipPath id="clip0_82_567"><rect width="45" height="45" fill="white"/></clipPath></defs></svg>') 22 22, pointer; */
   position: relative;
 }
 .hero-banner-area .hero-shape {
@@ -4851,7 +4847,7 @@ body.button-hovered::after {
   padding-bottom: 15px;
   padding-right: 50px;
 }
-.about-us-area .about-us-content-area .feature-list-wrapper::after {
+/* .about-us-area .about-us-content-area .feature-list-wrapper::after {
   content: "";
   position: absolute;
   left: 0;
@@ -4861,7 +4857,7 @@ body.button-hovered::after {
   -o-border-image: var(--zo-common-gradient);
      border-image: var(--zo-common-gradient);
   border-image-slice: 1;
-}
+} */
 @media (max-width: 576px), only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .about-us-area .about-us-content-area .feature-list-wrapper::after {
     bottom: 0;
