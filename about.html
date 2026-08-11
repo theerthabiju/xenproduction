@@ -7,13 +7,216 @@
     <meta name="description"
         content="Vimato is a futuristic AI agent template designed for generating images, videos, and animations—ideal for creative platforms, SaaS tools, and tech startups.">
     <title>About - Xen Productions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" type="image/png" href="images/favicon-1.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/offcanvas.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/remixicon.css">
+    <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        :root{
+            --xen-accent: #51a2fe;
+            --xen-dark: #14161a;
+            --xen-text: #4b4f57;
+            --xen-heading: #14161a;
+            --xen-border: #ececec;
+            --xen-surface: #ffffff;
+            --xen-surface-soft: #f7f7f8;
+            --xen-shadow: 0 10px 30px rgba(20, 22, 26, 0.06);
+        }
+
+        .about-detail-area.bg-white,
+        .why-choose-area,
+        .process-area,
+        .statistics-area{
+            background-color: var(--xen-surface) !important;
+            background-image: none !important;
+        }
+
+        .about-detail-area .section-heading-wrapper h2,
+       
+        .why-choose-area .section-heading-wrapper h2,
+        .process-area .section-heading-wrapper h2{
+            color: var(--xen-heading);
+        }
+
+        .about-detail-area .section-heading-wrapper p{
+            color: var(--xen-text);
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-detail-area .sub-heading span,
+       
+        .why-choose-area .sub-heading span,
+        .process-area .sub-heading span{
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 999px;
+            color: #004c8a;
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        /* Image + experience badge */
+        .about-image{
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .about-image img{
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+        .experience-card{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: var(--xen-surface);
+            border: 1px solid var(--xen-border);
+            box-shadow: var(--xen-shadow);
+            border-radius: 16px;
+            padding: 18px 22px;
+            text-align: center;
+            min-width: 150px;
+        }
+        .experience-card h2{
+            margin: 0;
+            font-size: 2rem;
+            color: var(--xen-heading);
+            line-height: 1;
+        }
+        .experience-card span{
+            display: block;
+            margin-top: 6px;
+            font-size: .8rem;
+            color: var(--xen-text);
+        }
+
+        .about-content h3{
+            color: var(--xen-heading);
+        }
+        .about-content p{
+            color: var(--xen-text);
+        }
+
+        /* Mission / Vision cards */
+        .mission-card{
+            background: var(--xen-surface-soft);
+            border: 1px solid var(--xen-border);
+            border-radius: 18px;
+            padding: 34px 30px;
+            height: 100%;
+            transition: box-shadow .25s ease, transform .25s ease, background .25s ease;
+        }
+        .mission-card:hover{
+            box-shadow: var(--xen-shadow);
+            transform: translateY(-4px);
+            background: var(--xen-surface);
+        }
+        .mission-card .icon{
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--xen-accent);
+            color: var(--xen-surface);
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+        .mission-card h4{
+            color: var(--xen-heading);
+            margin-bottom: 12px;
+        }
+        .mission-card p{
+            color: var(--xen-text);
+            margin: 0;
+        }
+
+        /* Counter boxes */
+        .counter-box{
+            padding: 20px 10px;
+        }
+        .counter-box h2{
+            font-size: 2.4rem;
+            color: var(--xen-heading);
+            margin: 0;
+        }
+        .counter-box span{
+            display: block;
+            margin-top: 6px;
+            color: var(--xen-text);
+            font-size: .9rem;
+        }
+
+   
+        /* Process steps */
+        .process-step{
+            background: var(--xen-surface);
+            border: 1px solid var(--xen-border);
+            border-radius: 18px;
+            padding: 30px 22px;
+            text-align: center;
+            height: 100%;
+            transition: box-shadow .25s ease, transform .25s ease;
+        }
+        .process-step:hover{
+            box-shadow: var(--xen-shadow);
+            transform: translateY(-4px);
+        }
+        .process-number{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--xen-accent);
+            color: var(--xen-dark);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .process-step h4{
+            color: var(--xen-heading);
+        }
+        .process-step p{
+            color: var(--xen-text);
+            margin: 0;
+            font-size: .92rem;
+        }
+
+        /* Statistics */
+        .stat-box{
+            background: var(--xen-surface-soft);
+            border: 1px solid var(--xen-border);
+            border-radius: 18px;
+            padding: 30px 16px;
+        }
+        .stat-number{
+            font-size: 2.2rem;
+            color: var(--xen-heading);
+            margin: 0 0 6px;
+        }
+        .stat-box .title-xs{
+            color: var(--xen-text);
+            margin: 0;
+        }
+
+        @media (max-width: 991px){
+            .experience-card{
+                position: static;
+                margin-top: 16px;
+                display: inline-block;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -135,13 +338,104 @@
         </section>
         <!-- Breadcrumb Area End -->
 
-        <!-- About Us Area Start -->
-        <section class="about-us-area about-us-area-v2 pt-140 pb-140">
+        
+
+   <!-- About Detail Area Start -->
+<section class="about-detail-area pt-140 pb-140 bg-white">
+    <div class="container common-container">
+
+        <!-- Heading -->
+        <div class="section-heading-wrapper text-center mb-70">
+            <div class="sub-heading mb-20">
+                <span>About XEN Productions</span>
+            </div>
+
+            <h2>
+                We Don't Just Create Videos
+                
+            </h2>
+
+            <p class="mt-20">
+                Transforming creative ideas into cinematic visuals that inspire,
+                engage, and deliver measurable business results.
+            </p>
+              
+        </div>
+
+        <div class="row align-items-center g-5 mt-5">
+
+            <!-- Left Image -->
+            <div class="col-lg-6">
+                <div class="about-image position-relative">
+                    <img src="images/im (2).jpg"
+                        class="img-fluid rounded-4"
+                        alt="XEN Productions">
+                    <div class="experience-card">
+                        <h2>5+</h2>
+                        <span>Years of Creative Excellence</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-6">
+             
+                   <!-- Mission & Vision -->
+        <div class="row g-4">
+             <div class="about-content">                 
+                    <p class="mb-25">
+                        Xen Productions is a full-service creative production
+                        company specializing in professional videography,
+                        commercial advertisements, cinematic editing,
+                        influencer collaborations, AI-powered content creation,
+                        and digital storytelling.
+                    </p>
+                    <p class="mb-35">
+                        Our experienced creative team combines innovative
+                        storytelling with cutting-edge technology to craft
+                        visually compelling content that captures attention,
+                        strengthens brand identity, and drives audience
+                        engagement across every digital platform.
+                    </p>
+                </div>
+            <div class="col-lg-6">
+                <div class="mission-card">
+                    <h4>Our Mission</h4>
+                    <p>
+                        To empower businesses, creators, and brands through
+                        innovative visual storytelling that builds trust,
+                        inspires audiences, and accelerates business growth.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mission-card">
+                    <h4>Our Vision</h4>
+                    <p>
+                        To become one of India's most trusted creative
+                        production companies by delivering world-class visual
+                        experiences powered by creativity and technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+
+        </div>
+
+     
+
+    </div>
+</section>
+<!-- About Detail Area End -->
+ <!-- About Us Area Start -->
+        <section class="about-us-area about-us-area-v2 pt-140 ">
             <div class="container">
             <div class="section-shape">
                 <svg width="25" height="355" viewBox="0 0 25 355" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_762_16_abs_0011101)">
-                        <path d="M0 20L5 27V328L0 335V20Z" fill="#FEE551"></path>
+                        <path d="M0 20L5 27V328L0 335V20Z" fill="#4fc4ff"></path>
                     </g>
                     <defs>
                         <filter id="filter0_d_762_16_abs_0011101" x="-20" y="0" width="45" height="355"
@@ -165,8 +459,8 @@
             <div class="section-plus-shape">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_766_2_abs_0011102)">
-                        <path d="M14.5 6V23" stroke="#FEE551" stroke-width="2" stroke-linecap="round"></path>
-                        <path d="M6 14.5H23" stroke="#FEE551" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M14.5 6V23" stroke="#4fc4ff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M6 14.5H23" stroke="#4fc4ff" stroke-width="2" stroke-linecap="round"></path>
                     </g>
                     <defs>
                         <filter id="filter0_d_766_2_abs_0011102" x="0" y="0" width="29" height="29"
@@ -189,8 +483,8 @@
             <div class="section-plus-shape-bottom">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_766_2_abs_0011103)">
-                        <path d="M14.5 6V23" stroke="#FEE551" stroke-width="2" stroke-linecap="round"></path>
-                        <path d="M6 14.5H23" stroke="#FEE551" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M14.5 6V23" stroke="#4fc4ff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M6 14.5H23" stroke="#4fc4ff" stroke-width="2" stroke-linecap="round"></path>
                     </g>
                     <defs>
                         <filter id="filter0_d_766_2_abs_0011103" x="0" y="0" width="29" height="29"
@@ -213,7 +507,7 @@
             <div class="container common-container">
                 <div class="section-heading-wrapper">
                     <div class="sub-heading mb-16">
-                        <span>About Xen Productions</span>
+                        <span>Services</span>
                     </div>
 
                     <h2 class="revealing-text">
@@ -230,53 +524,184 @@
                         </span>
                     </h2>
                 </div>
-                <div class="about-us-content-area">
-                    <div class="counter-wrapper" data-target="150">
-                        <span class="counter-number">0</span>
-
-                        <div class="counter-label">
-                            <h2>+</h2>
-                            <h3 class="title-xs">Projects</h3>
-                        </div>
-                    </div>
-                    <div class="feature-list-wrapper">
-
-                        <div class="feature-list item-1 primary-bg3">
-                            <h4 class="title-xs">Commercial & Ad Films</h4>
-                        </div>
-
-                        <div class="feature-list item-2 secondary-bg">
-                            <h4 class="title-xs"> Brand Videos</h4>
-                        </div>
-
-
-                        <div class="feature-list item-4">
-                            <h4 class="title-xs">AI Marketing </h4>
-                        </div>
-
-                        <div class="feature-list item-3 secondary-bg2">
-                            <h4 class="title-xs">Professional Video Editing</h4>
-                        </div>
-
-                        <div class="feature-list item-5 primary-bg2">
-                            <h4 class="title-xs">Influencer Marketing</h4>
-                        </div>
-
-                    </div>
-                </div>
+              
             </div>
             </div>
         </section>
         <!-- About Us Area End -->
-         
+<!-- services area -->
+  <section class="services-area mt-0 pt-0">
+    <div class="container common-container">
+        
+        <div class="row gy-4">
 
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 01</div>
+                        <h4 class="title-xs">Commercial &amp; Advertisement Shoots</h4>
+                        <p>Create premium advertisements that showcase your products and services with cinematic quality, helping your brand stand out in today's competitive market.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 02</div>
+                        <h4 class="title-xs">Corporate Video Production</h4>
+                        <p>Professional corporate films, company profiles, event coverage, interviews, and promotional videos that build trust and strengthen your brand identity.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 03</div>
+                        <h4 class="title-xs">Social Media Content Creation</h4>
+                        <p>Short-form content designed for Instagram, Facebook, YouTube Shorts, and TikTok that increases engagement and keeps your audience connected.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 04</div>
+                        <h4 class="title-xs">Professional Video Editing</h4>
+                        <p>Transform raw footage into polished, cinematic videos using advanced editing, color grading, motion graphics, sound design, and visual effects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 05</div>
+                        <h4 class="title-xs">Influencer Marketing</h4>
+                        <p>Connect your brand with the right creators to build authentic campaigns, expand your reach, and increase customer engagement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 06</div>
+                        <h4 class="title-xs">AI Marketing Solutions</h4>
+                        <p>Leverage Artificial Intelligence to generate smarter content strategies, AI-powered videos, automated workflows, and data-driven marketing campaigns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 07</div>
+                        <h4 class="title-xs">Photography</h4>
+                        <p>Professional product photography, corporate portraits, fashion shoots, event photography, and branding visuals that leave a lasting impression.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="service-card">
+                    <div class="card-body">
+                        <div class="scene-tag"><span class="rec-dot"></span>Scene 08</div>
+                        <h4 class="title-xs">Training Programs</h4>
+                        <p>Learn industry-standard videography, video editing, AI content creation, and digital production through hands-on training guided by experienced professionals.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- services area end -->
+
+<!-- Why Choose Us Area Start -->
+<section class="why-choose-area pt-140 pb-140">
+    <div class="container common-container">
+        <div class="section-heading-wrapper text-center mb-60">
+            <div class="sub-heading mb-16">
+                <span>Why Choose us</span>
+            </div>
+            <h2>Creative Strategic Results-Driven</h2>
+        </div>
+        <div class="row gy-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Approach</span>
+                        <h4 class="title-xs mb-12">Creative Storytelling</h4>
+                        <p>Every project is crafted with a unique story that connects emotionally with your audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Equipment</span>
+                        <h4 class="title-xs mb-12">Professional Equipment</h4>
+                        <p>Industry-grade cameras, lighting, drones, and editing tools for exceptional production quality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Team</span>
+                        <h4 class="title-xs mb-12">Experienced Creative Team</h4>
+                        <p>Passionate filmmakers, editors, designers, and marketers working together to bring your vision to life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Workflow</span>
+                        <h4 class="title-xs mb-12">Fast Delivery</h4>
+                        <p>Efficient production workflows ensure timely delivery without compromising quality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Technology</span>
+                        <h4 class="title-xs mb-12">AI-Powered Creativity</h4>
+                        <p>Combining human creativity with AI technology to produce innovative and impactful marketing content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="why-choose-item">
+                    <div class="wc-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="wc-content">
+                        <span class="wc-label">Delivery</span>
+                        <h4 class="title-xs mb-12">Customized Solutions</h4>
+                        <p>Every business is unique, and every project is tailored to meet your goals and budget.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose Us Area End -->
+
+  
+
+      
 
     </main>
     <!-- Footer Area Start -->
-    <footer class="footer-area pt-140" style="background-image: url(images/footer-bg.jpg);">
+    <footer class="footer-area pt-140" >
         <div class="bg-overly"></div>
         <div class="container common-container">
 
