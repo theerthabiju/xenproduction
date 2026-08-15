@@ -10903,3 +10903,279 @@ background-size: cover; */
     font-size: 26px;
     margin: 0;
 }
+/* =========================================
+   INFLUENCER MARKETING — "Creator Signal" redesign
+========================================= */
+ 
+.im-section {
+    --im-ink: #15171c;
+    --im-paper: #f5f3ee;
+    --im-accent: #ff4d6d;
+    --im-accent-soft: #ffe3e8;
+    --im-navy: #171a35;
+    --im-muted: #6b6f76;
+    --im-line: rgba(21,23,28,0.12);
+ 
+    position: relative;
+    background: var(--im-paper);
+    color: var(--im-ink);
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+ 
+.im-section * { font-family: 'Work Sans', sans-serif; }
+ 
+/* ---- Marquee stat band (signature element) ---- */
+ 
+.im-marquee {
+    background: var(--im-navy);
+    color: #fff;
+    overflow: hidden;
+    padding: 16px 0;
+    margin-bottom: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+ 
+.im-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 48px;
+    animation: im-scroll 28s linear infinite;
+    white-space: nowrap;
+}
+ 
+.im-marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d9dbe8;
+}
+ 
+.im-marquee-track span strong {
+    color: var(--im-accent);
+    font-weight: 600;
+}
+ 
+.im-marquee-track span::before {
+    content: "◆";
+    color: var(--im-accent);
+    font-size: 10px;
+}
+ 
+@keyframes im-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+ 
+.im-marquee:hover .im-marquee-track {
+    animation-play-state: paused;
+}
+ 
+/* ---- Container / grid ---- */
+ 
+.im-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+ 
+.im-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+ 
+/* ---- Left: content ---- */
+ 
+.im-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--im-ink);
+    padding: 7px 14px 7px 10px;
+    border: 1px solid var(--im-line);
+    border-radius: 999px;
+    margin-bottom: 28px;
+}
+ 
+.im-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--im-accent);
+    box-shadow: 0 0 0 0 rgba(255,77,109,0.5);
+    animation: im-pulse 1.8s ease-out infinite;
+}
+ 
+@keyframes im-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,77,109,0.45); }
+    70%  { box-shadow: 0 0 0 8px rgba(255,77,109,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,77,109,0); }
+}
+ 
+.im-heading {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(38px, 4.6vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+}
+ 
+.im-heading span {
+    display: block;
+    background: linear-gradient(90deg, var(--im-accent), #ff9a4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+ 
+.im-lead {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--im-ink);
+    max-width: 520px;
+    margin: 0 0 16px;
+}
+ 
+.im-sub {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--im-muted);
+    max-width: 520px;
+    margin: 0 0 36px;
+}
+ 
+.im-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--im-ink);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 26px;
+    border-radius: 999px;
+    transition: background .25s ease, transform .25s ease;
+}
+ 
+.im-cta i {
+    font-size: 18px;
+    transition: transform .25s ease;
+}
+ 
+.im-cta:hover {
+    background: var(--im-accent);
+    transform: translateY(-2px);
+}
+ 
+.im-cta:hover i {
+    transform: translate(2px, -2px);
+}
+ 
+.im-cta:focus-visible {
+    outline: 2px solid var(--im-accent);
+    outline-offset: 3px;
+}
+ 
+/* ---- Right: feature list ---- */
+ 
+.im-features {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.im-feature {
+    display: flex;
+    gap: 22px;
+    padding: 26px 4px;
+    border-top: 1px solid var(--im-line);
+    transition: background .25s ease, padding-left .25s ease;
+    border-radius: 10px;
+}
+ 
+.im-feature:last-child {
+    border-bottom: 1px solid var(--im-line);
+}
+ 
+.im-feature:hover {
+    background: var(--im-accent-soft);
+    padding-left: 14px;
+}
+ 
+.im-badge {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1.5px solid var(--im-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s ease, border-color .25s ease;
+}
+ 
+.im-badge i {
+    font-size: 16px;
+    color: var(--im-ink);
+    transition: color .25s ease;
+}
+ 
+.im-feature:hover .im-badge {
+    background: var(--im-accent);
+    border-color: var(--im-accent);
+}
+ 
+.im-feature:hover .im-badge i {
+    color: #fff;
+}
+ 
+.im-feature h4 {
+    margin: 2px 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+ 
+.im-feature p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--im-muted);
+    max-width: 380px;
+}
+ 
+/* ---- Responsive ---- */
+ 
+@media (max-width: 991px) {
+    .im-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+ 
+@media (max-width: 767px) {
+    .im-section { padding-bottom: 60px; }
+    .im-marquee { margin-bottom: 56px; }
+    .im-heading { font-size: 38px; }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    .im-marquee-track { animation: none; }
+    .im-dot { animation: none; }
+}
+ 
